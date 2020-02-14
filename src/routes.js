@@ -1,16 +1,14 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 
-import Main from './pages/Main/index';
-import Repository from './pages/Repository/index';
+import Cart from './Pages/Cart/index';
+import Home from './Pages/Home/index';
 
-export default function Router() {
+export default function Routes() {
   return (
-    <BrowserRouter>
-      <Switch>
-        <Route path="/" exact component={Main} />
-        <Route path="/repository/:repository" component={Repository} />
-      </Switch>
-    </BrowserRouter>
+    <Switch>
+      <Route path="/" exact component={Home} />
+      <Route path="/cart" component={Cart} />
+    </Switch>
   );
 }
